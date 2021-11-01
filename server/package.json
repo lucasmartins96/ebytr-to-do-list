@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha tests/unit/*/*.test.js -timeout 10000 -exit",
+    "debug": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
