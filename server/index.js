@@ -16,6 +16,6 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.listen(process.env.PORT, () => {
-  console.log('servidor rodando');
+app.listen(PORT, () => {
+  console.log(`servidor rodando na porta ${PORT}`);
 });
