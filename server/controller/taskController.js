@@ -8,7 +8,7 @@ const getAll = async (req, res) => {
 const create = async (req, res, _next) => {
   const { name, status } = req.body;
   await taskService.create({ name, status });
-  return res.status(201);
+  return res.status(201).send();
 };
 
 module.exports = {
