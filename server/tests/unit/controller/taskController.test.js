@@ -37,4 +37,31 @@ describe('Testando as funções da camada CONTROLLER', function () {
       taskService.getAll.restore();
     });
   });
+
+  describe('Ao chamar o controller de create', function () {
+    describe('Quando é inserido com sucesso', function () {
+      const response = {};
+      const request = {};
+      beforeEach(function () {
+        request.body = { name: 'revisar PDI', status: 'pronto' };
+  
+        response.status = sinon.stub()
+          .returns(response);
+        response.json = sinon.stub()
+          .returns();
+  
+        sinon.stub(taskService, 'create');
+      });
+  
+      it('Retornar o código de status 201 - CREATE', async function () {
+        await taskController.create(request, response);
+  
+        response.status.calledWith(201).should.to.be.true;
+      });
+  
+      afterEach(function () {
+        taskService.create.restore();
+      });
+    });
+  });
 });
