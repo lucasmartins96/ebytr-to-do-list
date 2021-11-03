@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha tests/unit/*/*.test.js -timeout 10000 -exit",
-    "debug": "nodemon index.js"
+    "start": "node api/server.js",
+    "test": "mocha --recursive ./tests --timeout 10000 --exit",
+    "test:coverage": "nyc --include='**/*.js' npm test",
+    "debug": "nodemon api/server.js"
   },
   "keywords": [],
   "author": "",
@@ -22,10 +24,13 @@
     "eslint-plugin-mocha": "^9.0.0",
     "eslint-plugin-sonarjs": "^0.10.0",
     "express": "^4.17.1",
+    "express-rescue": "^1.1.31",
+    "joi": "^17.4.2",
     "mocha": "^8.4.0",
     "mongodb-memory-server": "^7.5.1",
     "mongoose": "^6.0.12",
     "nodemon": "^2.0.14",
+    "nyc": "^15.1.0",
     "sinon": "^11.1.2"
   }
 }
