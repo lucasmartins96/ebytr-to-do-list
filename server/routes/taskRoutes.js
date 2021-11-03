@@ -9,4 +9,7 @@ router.route('/')
   .get(rescue(taskController.getAll))
   .post(rescue(taskController.create));
 
+router.route('/:id')
+  .delete(rescue(taskController.deleteById));
+
 module.exports = router;
