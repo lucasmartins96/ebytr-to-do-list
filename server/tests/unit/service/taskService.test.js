@@ -20,6 +20,16 @@ describe('Testando as funções da camada SERVICE', function () {
       allTasks.should.to.be.a('array');
       task.should.to.be.a('object');
     });
+
+    it('deve retornar um array de objetos com as propriedades "_id, name, createdAt e status"',
+    async function () {
+      const allTasks = await taskService.getAll();
+      const [task] = allTasks;
+      task.should.to.have.property('_id');
+      task.should.to.have.property('name');
+      task.should.to.have.property('createdAt');
+      task.should.to.have.property('status');
+    });
   
     afterEach(async function (done) {
       mongoose.disconnect();
