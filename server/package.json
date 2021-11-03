@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha tests/unit/*/*.test.js -timeout 10000 -exit",
+    "start": "node api/server.js",
+    "test": "mocha --recursive ./tests --timeout 10000 --exit",
     "test:coverage": "nyc --include='**/*.js' npm test",
-    "debug": "nodemon index.js"
+    "debug": "nodemon api/server.js"
   },
   "keywords": [],
   "author": "",
