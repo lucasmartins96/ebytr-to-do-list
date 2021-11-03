@@ -6,8 +6,11 @@ function App() {
     <div className="App">
       <div className="header" />
       <div className="main">
-        <div className="tasks">
-          ebytr to do list
+        <div className="tasks-container">
+          <div className="button-filters" />
+          <div className="list-task">
+            ebytr to do list
+          </div>
         </div>
       </div>
       <div className="footer" />
