@@ -49,6 +49,8 @@ describe('Testando as funções da camada CONTROLLER', function () {
           .returns(response);
         response.json = sinon.stub()
           .returns();
+        response.end = sinon.stub()
+          .returns();
   
         sinon.stub(taskService, 'create');
       });
