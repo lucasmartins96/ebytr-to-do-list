@@ -30,7 +30,13 @@ const create = async (payload) => {
   return TaskModel.create(payload);
 };
 
+const deleteById = async (id) => {
+  const queryResult = await TaskModel.findByIdAndDelete(id);
+  if (!queryResult) throw new RequestError('notFound', 'task not found');
+};
+
 module.exports = {
   getAll,
   create,
+  deleteById,
 };

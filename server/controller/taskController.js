@@ -11,7 +11,14 @@ const create = async (req, res) => {
   return res.status(201).end();
 };
 
+const deleteById = async (req, res) => {
+  const { id } = req.params;
+  await taskService.deleteById(id);
+  return res.status(204).end();
+};
+
 module.exports = {
   getAll,
   create,
+  deleteById,
 };
