@@ -17,8 +17,16 @@ const deleteById = async (req, res) => {
   return res.status(204).end();
 };
 
+const updateById = async (req, res) => {
+  const { id } = req.params;
+  const { name, status } = req.body;
+  await taskService.updateById(id, { name, status });
+  return res.status(200).end();
+};
+
 module.exports = {
   getAll,
   create,
   deleteById,
+  updateById,
 };

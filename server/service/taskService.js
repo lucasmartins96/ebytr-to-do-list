@@ -35,8 +35,17 @@ const deleteById = async (id) => {
   if (!queryResult) throw new RequestError('notFound', 'task not found');
 };
 
+const updateById = async (id, { name, status }) => {
+  const joiErrorMessage = validateFields({ name, status });
+  if (joiErrorMessage) throw new RequestError('badRequest', joiErrorMessage);
+
+  const queryResult = await TaskModel.findByIdAndUpdate(id, { name, status });
+  if (!queryResult) throw new RequestError('notFound', 'task not found');
+};
+
 module.exports = {
   getAll,
   create,
   deleteById,
+  updateById,
 };
