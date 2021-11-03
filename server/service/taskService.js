@@ -2,7 +2,7 @@ const Joi = require('joi');
 const TaskModel = require('../model/Task');
 const RequestError = require('../utils/RequestError');
 
-const getAll = () => TaskModel.find({});
+const getAll = () => TaskModel.find({}, '-__v');
 
 const validateFields = (payload) => {
   const { error } = Joi.object({
