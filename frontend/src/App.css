@@ -39,6 +39,7 @@
     'button-filters'
     'list-task';
   grid-area: tasks-container;
+  padding: 0 25px;
 }
 
 .button-filters {
