@@ -48,6 +48,29 @@
 
 .list-task {
   grid-area: list-task;
+  margin: 0;
+  padding: 0;
+}
+
+.task-component {
+  border: 1px solid black;
+  border-radius: 5px;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 2fr 0.5fr 0.5fr;
+  height: 15%;
+}
+
+.task-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 15px;
+}
+
+.task-status {
+  align-self: center;
+  text-align: center;
 }
 
 .footer {
