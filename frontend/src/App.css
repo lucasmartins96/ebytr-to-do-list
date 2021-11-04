@@ -36,14 +36,14 @@
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    'button-filters'
+    'task-filters'
     'list-task';
   grid-area: tasks-container;
   padding: 0 25px;
 }
 
-.button-filters {
-  grid-area: button-filters;
+.task-filters {
+  grid-area: task-filters;
 }
 
 .list-task {
