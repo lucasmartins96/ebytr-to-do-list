@@ -46,6 +46,12 @@
   grid-area: task-filters;
 }
 
+.filters-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
 .list-task {
   grid-area: list-task;
   margin: 0;
