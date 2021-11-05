@@ -21,7 +21,7 @@ To Do List para as pessoas colaboradoras da Ebytr
 
 - Instruções para rodar localmente o [Frontend](./frontend/README.md)
 
-## Running Tests
+## Executando os Testes
 
 Instruções para rodar os testes do [Backend](./server/README.md)
 
@@ -89,7 +89,7 @@ Insira os seguintes dados no corpo da requisição:
 | :-------- | :------- | :------------------------------------------- |
 | `id`      | `string` | **Obrigatório**. Id da tarefa a ser removida |
 
-## Tech Stack
+## Stacks
 
 **Client:** React
 
