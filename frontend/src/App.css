@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 0.3fr 2.4fr 0.3fr;
-  gap: 0px 0px;
+  gap: 0 0;
   grid-auto-flow: row;
   grid-template-areas:
     'header'
@@ -22,7 +22,7 @@
   display: grid;
   grid-template-columns: 0.6fr 1.8fr 0.6fr;
   grid-template-rows: 1fr;
-  gap: 0px 0px;
+  gap: 0 0;
   grid-auto-flow: row;
   grid-template-areas: '. tasks-container .';
   grid-area: main;
@@ -33,17 +33,23 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 0.2fr 1.8fr;
-  gap: 0px 0px;
+  gap: 15px 0;
   grid-auto-flow: row;
   grid-template-areas:
-    'button-filters'
+    'task-filters'
     'list-task';
   grid-area: tasks-container;
   padding: 0 25px;
 }
 
-.button-filters {
-  grid-area: button-filters;
+.task-filters {
+  grid-area: task-filters;
+}
+
+.filters-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
 }
 
 .list-task {
