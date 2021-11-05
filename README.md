@@ -8,10 +8,10 @@ To Do List para as pessoas colaboradoras da Ebytr
 
 - [x] Visualizar a lista de tarefas
 - [x] Ordenar a lista de tarefas por ordem alfabética, data de criação ou por status
-- [] Inserir uma nova tarefa na lista
-- [] Remover uma tarefa da lista
-- [] Atualizar uma tarefa da lista
-- [] A tarefa deve possuir um status editável: pendente, em andamento ou pronto
+- [ ] Inserir uma nova tarefa na lista
+- [ ] Remover uma tarefa da lista
+- [ ] Atualizar uma tarefa da lista
+- [ ] A tarefa deve possuir um status editável: pendente, em andamento ou pronto
 
 ## Executando os projetos
 
