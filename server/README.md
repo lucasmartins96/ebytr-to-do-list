@@ -61,7 +61,7 @@ Para rodar os testes, execute o seguinte comando
 Método: `GET`
 
 ```http
-  GET /tasks
+  http://localhost:3001/tasks
 ```
 
 #### Cadastrar tarefa
@@ -69,7 +69,7 @@ Método: `GET`
 Método: `POST`
 
 ```http
-  POST /tasks
+  http://localhost:3001/tasks
 ```
 
 Insira os seguintes dados no corpo da requisição:
@@ -91,7 +91,7 @@ Insira os seguintes dados no corpo da requisição:
 Método: `PUT`
 
 ```http
-  PUT /tasks/:id
+  http://localhost:3001/tasks/:id
 ```
 
 | Parameter | Type     | Description                                    |
@@ -117,7 +117,7 @@ Insira os seguintes dados no corpo da requisição:
 Método: `DELETE`
 
 ```http
-  DELETE /tasks/:id
+  http://localhost:3001/tasks/:id
 ```
 
 | Parameter | Type     | Description                                  |
