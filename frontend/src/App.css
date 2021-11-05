@@ -1,0 +1,94 @@
+.App {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 2fr 0.5fr;
+  gap: 0 0;
+  grid-auto-flow: row;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+  width: 100%;
+  height: 100vh;
+}
+
+.header {
+  background-color: #036b52;
+  grid-area: header;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 0.6fr 1.8fr 0.6fr;
+  grid-template-rows: 1fr;
+  gap: 0 0;
+  grid-auto-flow: row;
+  grid-template-areas: '. tasks-container .';
+  grid-area: main;
+}
+
+.tasks-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.2fr 1.8fr;
+  gap: 15px 0;
+  grid-auto-flow: row;
+  grid-template-areas:
+    'task-filters'
+    'list-task';
+  grid-area: tasks-container;
+  padding: 0 25px;
+}
+
+.task-filters {
+  grid-area: task-filters;
+}
+
+.filters-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.list-task {
+  grid-area: list-task;
+  height: 435px;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 0 10px;
+}
+
+.task-component {
+  border-radius: 5px;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 2fr 0.5fr 0.5fr;
+  height: 15%;
+  margin-bottom: 15px;
+}
+
+.task-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 15px;
+}
+
+.task-name {
+  font-weight: 600;
+}
+
+.task-createdAt {
+  font-weight: 300;
+}
+
+.task-status {
+  align-self: center;
+  text-align: center;
+}
+
+.footer {
+  background-color: #036b52;
+  grid-area: footer;
+}
