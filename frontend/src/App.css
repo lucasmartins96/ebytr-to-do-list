@@ -75,6 +75,14 @@
   padding-left: 15px;
 }
 
+.task-name {
+  font-weight: 600;
+}
+
+.task-createdAt {
+  font-weight: 300;
+}
+
 .task-status {
   align-self: center;
   text-align: center;
