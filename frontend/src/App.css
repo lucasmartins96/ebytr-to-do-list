@@ -24,13 +24,53 @@
   grid-template-rows: 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas: '. tasks .';
+  grid-template-areas: '. tasks-container .';
   grid-area: main;
 }
 
-.tasks {
+.tasks-container {
   border: 1px solid black;
-  grid-area: tasks;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.2fr 1.8fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    'button-filters'
+    'list-task';
+  grid-area: tasks-container;
+  padding: 0 25px;
+}
+
+.button-filters {
+  grid-area: button-filters;
+}
+
+.list-task {
+  grid-area: list-task;
+  margin: 0;
+  padding: 0;
+}
+
+.task-component {
+  border: 1px solid black;
+  border-radius: 5px;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 2fr 0.5fr 0.5fr;
+  height: 15%;
+}
+
+.task-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 15px;
+}
+
+.task-status {
+  align-self: center;
+  text-align: center;
 }
 
 .footer {
