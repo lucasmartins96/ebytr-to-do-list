@@ -58,11 +58,15 @@ Para rodar os testes, execute o seguinte comando
 
 #### Listar todas as tarefas
 
+Método: `GET`
+
 ```http
   GET /tasks
 ```
 
 #### Cadastrar tarefa
+
+Método: `POST`
 
 ```http
   POST /tasks
@@ -83,6 +87,8 @@ Insira os seguintes dados no corpo da requisição:
 | `status`  | `string` | **Obrigatório**. Status da tarefa ("pronto", "em andamento" ou "pendente") |
 
 #### Atualizar tarefa
+
+Método: `PUT`
 
 ```http
   PUT /tasks/:id
@@ -107,6 +113,8 @@ Insira os seguintes dados no corpo da requisição:
 | `status`  | `string` | **Obrigatório**. Status da tarefa ("pronto", "em andamento" ou "pendente") |
 
 #### Remover tarefa
+
+Método: `DELETE`
 
 ```http
   DELETE /tasks/:id
