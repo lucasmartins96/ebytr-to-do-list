@@ -15,6 +15,7 @@ Certifique que os seguintes programas estejam instalados antes de rodar o projet
 
 - [Git](https://git-scm.com/downloads)
 - [Node](https://nodejs.org/)
+- [MongoDB](https://www.mongodb.com/try/download/community)
 - [Postman](https://www.postman.com/downloads/) ou [Insomnia](https://insomnia.rest/download)
 
 ## Rode localmente
@@ -76,10 +77,10 @@ Insira os seguintes dados no corpo da requisição:
 }
 ```
 
-| Parameter   | Type     | Description                     |
-| :---------- | :------- | :------------------------------ |
-| `name`      | `string` | **Obrigatório**. Nome da tarefa |
-| `status`    | `string` | **Obrigatório**. Status da tarefa ("pronto", "em andamento" ou "pendente") |
+| Parameter | Type     | Description                                                                |
+| :-------- | :------- | :------------------------------------------------------------------------- |
+| `name`    | `string` | **Obrigatório**. Nome da tarefa                                            |
+| `status`  | `string` | **Obrigatório**. Status da tarefa ("pronto", "em andamento" ou "pendente") |
 
 #### Atualizar tarefa
 
@@ -100,10 +101,10 @@ Insira os seguintes dados no corpo da requisição:
 }
 ```
 
-| Parameter   | Type     | Description                     |
-| :---------- | :------- | :------------------------------ |
-| `name`      | `string` | **Obrigatório**. Nome da tarefa |
-| `status`    | `string` | **Obrigatório**. Status da tarefa ("pronto", "em andamento" ou "pendente") |
+| Parameter | Type     | Description                                                                |
+| :-------- | :------- | :------------------------------------------------------------------------- |
+| `name`    | `string` | **Obrigatório**. Nome da tarefa                                            |
+| `status`  | `string` | **Obrigatório**. Status da tarefa ("pronto", "em andamento" ou "pendente") |
 
 #### Remover tarefa
 
@@ -115,8 +116,6 @@ Insira os seguintes dados no corpo da requisição:
 | :-------- | :------- | :------------------------------------------- |
 | `id`      | `string` | **Obrigatório**. Id da tarefa a ser removida |
 
-
 ## Feedback
 
 Se você tiver algum comentário, entre em contato comigo pelo e-mail lucasmartins@gmail.com
-
