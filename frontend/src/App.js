@@ -9,6 +9,7 @@ function App() {
   const [toDoList, setToDoList] = useState(null);
   const [alphabeticalSortingType, setAlphabeticalSortingType] = useState(' ');
   const [creationDateSortingType, setCreationDateSortingType] = useState(' ');
+  const [statusSortingType, setStatusSortingType] = useState(' ');
 
   async function fetchAPI() {
     const response = await axios.get('https://lmartins-ebytr-todolistapi.herokuapp.com/tasks')
@@ -45,6 +46,45 @@ function App() {
       ));
     }
   }, [creationDateSortingType]);
+
+  const splitTasksByStatus = (tasksArr = []) => {
+    const tasksToOrdered = [...tasksArr];
+    const tasksByStatus = { pending: [], progress: [], completed: [] };
+
+    tasksToOrdered.forEach((task) => {
+      const { status } = task;
+      if (status === 'pendente') tasksByStatus.pending = [...tasksByStatus.pending, task];
+      if (status === 'em andamento') {
+        tasksByStatus.progress = [...tasksByStatus.progress, task];
+      }
+      if (status === 'pronto') {
+        tasksByStatus.completed = [...tasksByStatus.completed, task];
+      }
+    });
+
+    return tasksByStatus;
+  };
+
+  useEffect(() => {
+    if (!toDoList) {
+      return null;
+    }
+
+    const tasksByStatus = splitTasksByStatus(toDoList);
+    const { pending, progress, completed } = tasksByStatus;
+
+    switch (statusSortingType) {
+    case 'pending':
+      setToDoList([...pending, ...progress, ...completed]);
+      break;
+    case 'progress':
+      setToDoList([...progress, ...completed, ...pending]);
+      break;
+    default:
+      setToDoList([...completed, ...pending, ...progress]);
+      break;
+    }
+  }, [statusSortingType]);
 
   return (
     <div className="App">
@@ -85,6 +125,24 @@ function App() {
                     <option value=" "> </option>
                     <option value="recent">mais recentes</option>
                     <option value="older">mais antigas</option>
+                  </select>
+                </div>
+              </div>
+              <div className="order-creation-date">
+                <div className="label">
+                  status
+                </div>
+                <div className="order-status">
+                  <select
+                    value={ statusSortingType }
+                    id="select-order-status"
+                    name="select-order-status"
+                    onChange={ (e) => setStatusSortingType(e.target.value) }
+                  >
+                    <option value=" "> </option>
+                    <option value="pending">pendente</option>
+                    <option value="progress">em andamento</option>
+                    <option value="completed">pronto</option>
                   </select>
                 </div>
               </div>
