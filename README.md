@@ -2,38 +2,28 @@
 
 To Do List para as pessoas colaboradoras da Ebytr
 
-
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
-
-
 
 ## Funcionalidades
 
-- Visualizar a lista de tarefas
-- Ordenar a lista de tarefas por ordem alfabética, data de criação ou por status
-- Inserir uma nova tarefa na lista
-- Remover uma tarefa da lista
-- Atualizar uma tarefa da lista
-- A tarefa deve possuir um status editável: pendente, em andamento ou pronto
-
+- [x] Visualizar a lista de tarefas
+- [x] Ordenar a lista de tarefas por ordem alfabética, data de criação ou por status
+- [] Inserir uma nova tarefa na lista
+- [] Remover uma tarefa da lista
+- [] Atualizar uma tarefa da lista
+- [] A tarefa deve possuir um status editável: pendente, em andamento ou pronto
 
 ## Executando os projetos
 
 - [API do desafio no heroku](https://lmartins-ebytr-todolistapi.herokuapp.com/tasks)
 
-- [Página do desafio no vercel]()
-
 - Instruções para rodar localmente o [Backend](./server/README.md)
 
-Instruções para rodar localmente o [Frontend](./frontend/README.md)
-
+- Instruções para rodar localmente o [Frontend](./frontend/README.md)
 
 ## Running Tests
 
 Instruções para rodar os testes do [Backend](./server/README.md)
-
-Instruções para rodar os testes do [Frontend](./frontend/README.md)
-
 
 ## Referência da API
 
@@ -60,10 +50,10 @@ Insira os seguintes dados no corpo da requisição:
 }
 ```
 
-| Parameter   | Type     | Description                     |
-| :---------- | :------- | :------------------------------ |
-| `name`      | `string` | **Obrigatório**. Nome da tarefa |
-| `status`    | `string` | **Obrigatório**. Status da tarefa ("pronto", "em andamento" ou "pendente") |
+| Parameter | Type     | Description                                                                |
+| :-------- | :------- | :------------------------------------------------------------------------- |
+| `name`    | `string` | **Obrigatório**. Nome da tarefa                                            |
+| `status`  | `string` | **Obrigatório**. Status da tarefa ("pronto", "em andamento" ou "pendente") |
 
 #### Atualizar tarefa
 
@@ -84,10 +74,10 @@ Insira os seguintes dados no corpo da requisição:
 }
 ```
 
-| Parameter   | Type     | Description                     |
-| :---------- | :------- | :------------------------------ |
-| `name`      | `string` | **Obrigatório**. Nome da tarefa |
-| `status`    | `string` | **Obrigatório**. Status da tarefa ("pronto", "em andamento" ou "pendente") |
+| Parameter | Type     | Description                                                                |
+| :-------- | :------- | :------------------------------------------------------------------------- |
+| `name`    | `string` | **Obrigatório**. Nome da tarefa                                            |
+| `status`  | `string` | **Obrigatório**. Status da tarefa ("pronto", "em andamento" ou "pendente") |
 
 #### Remover tarefa
 
@@ -104,7 +94,6 @@ Insira os seguintes dados no corpo da requisição:
 **Client:** React
 
 **Server:** Node, Express, Express-rescue, MongoDB, Mongoose, Joi
-
 
 ## Feedback
 
@@ -123,4 +112,3 @@ Feito por Lucas Martins 👋 Entre em contato!
 
 [![Linkedin Badge](https://img.shields.io/badge/-Lucas%20Martins-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/lumartins-silva/)](https://www.linkedin.com/in/lumartins-silva/)
 [![Gmail Badge](https://img.shields.io/badge/-lucasmartins.dsilva@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:lucasmartins.dsilva@gmail.com)](mailto:lucasmartins.dsilva@gmail.com)
-
